@@ -22,6 +22,7 @@ Projeto realizado durante a NLW Expert de NodeJS, realizada pela [Rocketseat](ht
 
 
 
+![2024-02-08-00-06-20](https://github.com/GuilhermeOnizio/Sistema-de-Enquete/assets/129892786/09f923c5-8acd-475d-9182-343127607fa8)
 
   
 
