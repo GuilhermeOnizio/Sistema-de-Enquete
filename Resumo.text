@@ -1,0 +1,32 @@
+O que foi aprendido nessa aula?
+
+Começando, esse é um resumo simples sobre a 1ª Aula do NLW Expert. Estou fazendo um sistema de enquete utilizando linguagens e frameworks
+que até então nunca tinha ouvido falar. 
+- Primeiro, começamos obviamente pelo NodeJS, criando pastas no nosso querido VS CODE como "Polls". Após criar a pasta, instalamos no terminal
+o 'npm', alguém que vamos utilizar MUITO ao decorrer do código. Adiante, iniciamos ele, escrevendo "npm init -y", o qual criará um arquivo
+.json na sua pasta Polls, também instalaremos o typescript e o types/node que é a integração do typescript com o node: "npm install typescript
+ types/node -D". Logo após, iniciamos o typescript com "npx tsc --init", que também criará o seu arquivo 'tsconfig.json'. Para configurarmos 
+ o nosso 'tsconfig.json', abriremos o github da microsoft "Node Target Mapping" e copiaremos as linhas "lib", "module" e "target" em seus
+ respectivos lugares.
+
+ - Segundamente, nós começamos a botar a mão na massa. No lado "explorar", criamos a pasta "src", dentro do src criaremos também a pasta 
+ "http" (onde ficará o servidor) e por ultimo criamos o arquivo "server.ts". Para executar o servidor, primeiro temos que entender que o código
+ que para o servidor funcionar com typescript, o Node tem que converter o código do typescript para código Node, e temos uma biblioteca para isso!
+ O "npm install tsx -D" faz essa conversão de TypeScript para JavaScript, assim podendo rodar o Node. Agora, podemos ir no arquivo "package.json",
+ e na linha "test" mudamos para "dev", e o texto á direita mudamos para o seguinte texto: tsx watch src/http/server.ts.
+ O tsx chama nossa biblioteca, watch fica observando nossas ações, enquanto a parte final é o caminho do servidor.
+
+ - Terceiramente, instalamos meu novo amigo fastify, um framework do Node utilizado no Back-End. Para instalarmos, no terminal escrevemos
+ "npm i fastify". Agora, precisamos de um banco de dados. Instale o Docker em seu sistema operacional e depois crie o arquivo "docker-compose.yml"
+ na sua pasta do VSCODE e copie TODO o código do meu arquivo e cole no seu arquivo. Se quiser explicação sobre o código completo, me chame,
+ se você entendeu o código, parabéns! Agora no terminal, escreva "docker compose up -d", isso deixará o docker rodando em background, melhorando
+ o desenvolvimento do seu código no container. Agora, instalaremos uma ORMs chamada de Prisma com "npm install -D prisma", e logo após iniciar
+ iniciar com "npx prisma init", que criará o arquivo .env, onde na URL trocaremos o username, senha e colocaremos nosso banco de dados.
+
+ Agora, na parte onde foi criado o schema.prisma, crie o Modelo Poll (do jeito que fiz no código) e depois "npx prisma migrate dev", após, 
+ escreva "create poll". O Prisma também tem uma interface para navegar pelo Banco de Dados, abra com o "npx prisma studio".
+
+ Logo após, abrimos o hoppscotch no Google, instalamos a extensão no navegador e assim fazemos as requisições da nossa API. Para a validação
+ de dados, instalamos a biblioteca zod com "npm install zod".
+
+ 
